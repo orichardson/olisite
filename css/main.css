@@ -59,18 +59,13 @@ body {
 }
 
 #tree-button-panel {
-    float: right;
     margin-top:15px;
-    text-align: right;
     opacity: 30%;
 }
 #tree-button-panel:hover{
     opacity:100%;
 }
 #tree-button-panel button {
-    background: none;
-    padding: 5px;
-    border: none;
     text-shadow: -1px 1px 2px rgb(var(--bg-color)),
         1px 1px 2px rgb(var(--bg-color)),
         1px -1px 2px rgb(var(--bg-color)),
@@ -86,9 +81,6 @@ body {
 }
 #tree-remove {
     margin-right:5px;
-}
-#tree-ffwd {
-    /* opacity: 15%; */
 }
 #tree-play:hover{
     color: #080;
@@ -339,14 +331,25 @@ h1, h2, h3, h4 {
 
 /* specific to  RESEARCH */
 .myname {
-    /* font-family: 'ABeeZee'; */
+    color: color-mix(in srgb, rgb(var(--fg-color)) 30%, var(--accent-color));
+    /* color:var(--accent-color); */
+    /* font-family: 'ABeeZee';
+    font-size: smaller; */
+    /* content: 'OER'; */
     /* font-style: oblique; */
+    /* font-family: sans-serif; */
+    /* font-stretch: 0%; */
     /* font-width: ; */
 }
 .talk-list {
     --accent-color: lightsteelblue;
     line-height: 1.15;
+    /* list-style: telugu outside url(''); */
+    list-style: telugu; 
 }
+/* .talk-list li::before {
+    content : ""
+} */
 #everything .paperlist > li:not(:last-child) { 
     margin-bottom: 5mm;
 }
@@ -376,15 +379,64 @@ a.paper {
 }
 
 
+.right-button-panel {
+    float: right;
+    text-align: right;
+}
+@media screen and (max-width:550px) {
+    .right-button-panel {
+        float: none;
+        display: block;
+        margin-bottom: 15px; 
+    }
+}
+
+.right-button-panel button {
+    background: none;
+    padding: 5px;
+    opacity: 40%;
+    border: none;
+}
+.right-button-panel button:hover{
+    opacity:100%;
+}
+.right-button-panel i {
+    font-size: 40px;
+}
+
+
 ul.paperlist {
     margin-top: 50px;
     list-style-type: none;
     padding-left: 0;
 }
+.legend-wrapper {
+    margin-bottom:30px;
+    margin-left:40px;
+}
+div.legend-pieces{
+    display:inline-block;
+    vertical-align:middle;
+    border-left:4px solid gray;
+    padding-left:5px;
+    max-width:60vw;
+}
 @media screen and (min-width: 850px) {
     ul.paperlist {
         padding-left: 30px;
     }
+    .legend-wrapper {
+        margin-bottom:20px;
+        margin-left:70px;
+    }
+}
+
+.legend-label{ 
+    rotate:-90deg;
+    display:inline-block; 
+    color:gray; 
+    font-size:large;
+    margin-right:-15px;
 }
 .legenditem {
     color: var(--accent-color);
@@ -447,15 +499,22 @@ div.papertitle {
     color: color-mix(in srgb, var(--accent-color) 90%, rgb(var(--bg-color)));
     /* filter: brightness(3) saturate(0.5); */
 }
+.special-tags {
+    pointer-events: none;
+}
 .special-tags > .special-tag {
     position: relative;
     margin-bottom: 20px;
     margin-left: 45px;
+    pointer-events: none;
 }
 .special-tag>.special-tag-text {
     position: absolute;
     font-size: medium;
     line-height: 100%;
+}
+.paperlist .button-div {
+    max-width: 70vw;
 }
 @media screen and (min-width: 850px) {
     .special-tag>.special-tag-text {
@@ -489,7 +548,8 @@ div.papertitle {
     /* background-color: midnightblue; */
     /* color: lightgray; */
     background-color: #211;
-    color:lightcoral;
+    /* color:lightcoral; */
+    color:rgb(103, 206, 180);
     /* border: 1px inset coral; */
 }
 .label-exam {
@@ -498,8 +558,11 @@ div.papertitle {
     background-color: #402;
 }
 .talk-details{
-    color:gray;
+    color:color-mix(rgb(var(--fg-color)) 80%, rgb(var(--bg-color)));
     vertical-align: middle;
+}
+.talk-title {
+    font-size:large;
 }
 
 
@@ -587,3 +650,6 @@ div.papertitle {
  .maxwidth-100ch {
     max-width:100ch;
  }
+.maxwidth-85ch{
+    max-width:85ch;
+}

@@ -4,6 +4,6 @@ date: 2024-07-29
 venue: ILIAD Conference
 links:
     - ['slides.pptx', '/files/slides/???.pptx']
-    - ['recording (YouTube)', 'https://youtu.be/CDpIDO3iJu8']
+    - ['<i class="fa-brands fa-youtube"></i> recording', 'https://youtu.be/CDpIDO3iJu8', '--accent-color:red;']
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "A Unified Theory of Probabilistic Modeling, Dependence, and Inconsistency"
-conf: PhD Thesis, Cornell University, 
+conf: PhD Thesis, Cornell University
 month: August
 year: 2024
 # arxiv: https://arxiv.org/abs/2202.11862

@@ -91,6 +91,8 @@ exclude:
   - .git/
   - .gitignore
   - _site/
+  - _papers/assets/
+
   # - files/
 #   - _main_pages_prerendered/
 #   - vendor/bundle/

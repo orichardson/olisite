@@ -20,6 +20,7 @@ redirect_from:
   - /
 ---
 
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
 <!-- <div class="color-marker" data-bg-color="{{site.main_pages[1].colors.fg}}" data-fg-color="{{site.main_pages[1].colors.bg}}"></div> -->
 <!-- <h1> Research </h1> -->
@@ -28,11 +29,11 @@ redirect_from:
 My work spans machine learning, probabilistic graphical models, information theory, programming languages, category theory, and logic. -->
 <!-- My research aims to develop clean, intuitive, and conceptually rich mathematical foundations for agents that are well-suited to modern AI systems.  -->
 <!-- My research develops clean and conceptually rich mathematical foundations for AI systems.  -->
-My research develops mathematical and conceptual foundations for fallible AI systems.
-<!-- % I do this by drawing from commonalities across the wide range of fields in which I have expertise, including probabilistic graphical models, information theory, category theory, logic, differential geometry, and machine learning.
-% Much of the work I have done in my PhD revolves around a knowledge representation I invented, called a Probabilistic Dependency Graph. -->
-The result so far has been an elegant unifying picture that explains many standard but seemingly ad-hoc choices made in practice.
-A key technical ingredient is a class of models I invented called
+<!-- My research develops mathematical and conceptual foundations for fallible AI systems. -->
+My research develops mathematical and conceptual foundations for fallible AI systems. 
+<!-- The result so far has been an elegant unifying picture that explains many standard but seemingly ad-hoc choices made in practice. -->
+The result so far has been a unifying picture that explains many standard but seemingly ad-hoc choices made in practice.
+A key technical ingredient is a class of models called
 <!-- [Probabilistic Dependency Graphs (PDGs)](https://orichardson.github.io/pdg/), -->
 <!-- <a class="paper" href="https://arxiv.org/abs/2012.10800">Probabilistic Dependency Graphs</a> <a href="https://orichardson.github.io/pdg/">(PDGs)</a> -->
 Probabilistic Dependency Graphs <a href="https://orichardson.github.io/pdg/">(PDGs)</a>
@@ -47,8 +48,6 @@ yet can model inconsistent beliefs and most scenarios in machine learning.
 Indeed, many important algorithms in AI turn out to be instances of an intuitive heuristic approach to resolving probabilistic inconsistency. 
 </p> 
 
-<!-- The hope is that a principled approach  -->
-
 For an overview, see my 
 [research statement]({{ site.baseurl }}/files/research-statement.pdf)
     <span style="color:#555; font-size:smaller;">[last update March 2024]</span> ;  
@@ -62,14 +61,22 @@ For an overview, see my
 <h2>
 <!-- <input class="search" size=13 oninput="this.size = this.value.length" style="background: none; text-align:center;" 
     value="Peer-Reviewed" />  &nbsp; -->
-Peer-Reviewed
+<!-- Peer-Reviewed -->
 Papers and Publications 
 </h2>
 
+<!-- <div style="display:"> -->
+<div class="right-button-panel">
+    <button  
+        onclick="$('.accordion-panel').each( (i,x) => $(x).data('expander')())"><i class="fa-solid fa-maximize"></i></button>
+    <button 
+        onclick="$('.accordion-panel').each( (i,x) => $(x).data('contractor')())"><i class="fa-solid fa-minimize"></i></button>
+</div>
+
 <!-- Legend: -->
-<div style="margin-bottom:20px;margin-left:70px;">
-    <div style="rotate:-90deg;display:inline-block; color:gray; font-size:large;margin-right:-15px;">Legend</div>
-    <div style="display:inline-block;vertical-align:middle;border-left:4px solid gray;padding-left:5px">
+<div class="legend-wrapper">
+    <div class="legend-label">Legend</div>
+    <div class="legend-pieces">
         <!-- TODO: make this into a loop... -->
         <div class="thesis-type legenditem">
             <span><i class="fa fa-file" aria-hidden="true"></i></span>
@@ -168,7 +175,7 @@ Papers and Publications
         {% if more %}
         <button class="textbuttonlink toggle-button">
             <span class="text-folded">
-                abstract <i class="fa-solid fa-circle-chevron-left"></i></span>
+                ++ <i class="fa-solid fa-circle-chevron-left"></i></span>
             <span class="text-unfolded">
                 <i class="fa-solid fa-circle-chevron-up"></i></span>
         </button>
@@ -182,28 +189,29 @@ Papers and Publications
 <br>
 
 <!-- <h2> Position Papers and Blog Posts </h2> -->
-<!-- <h2> Various Other Talks </h2> -->
 <!-- <div class="color-marker" data-bg-color="{{site.main_pages[1].colors.fg}}" data-fg-color="{{site.main_pages[1].colors.bg}}"></div> -->
 
+<!-- <h2> Various Other Talks </h2> -->
 <h2> Academic Talks </h2>
+<br/>
 
 <ul class="talk-list">
 {% assign talks_sorted = site.talks | sort: "date" | reverse %}
 {% for talk in talks_sorted %}
     <li> 
-    <i> {{ talk.title }}. </i> 
+    <span class="talk-title"> {{ talk.title }} </span> 
     <br>
     {% for label in talk.labels %}
         <span class="label label-{{label.type}}">{{label.text}}</span>
     {% endfor %}
-    <span class="talk-details">@ {{ talk.venue }},
-    &nbsp;&nbsp;&nbsp;
+    <span class="talk-details">@ {{ talk.venue }}
+    <!-- &nbsp;&nbsp;&nbsp; -->
     <!-- <br> -->
-    {{ talk.date | date: "%-e %b %Y" }}.
+    ({{ talk.date | date: "%-e %B %Y" }}).
     </span>
     <div class="button-div" style="margin-top:-2px;margin-bottom:15px;">
         {% for l in talk.links %}
-            <a href="{{l[1] | relative_url}}" class="textbuttonlink">{{l[0]}}</a>
+            <a href="{{l[1] | relative_url}}" style="{{l[2]}}" class="textbuttonlink">{{l[0]}}</a>
         {% endfor %}
     </div>
     </li>

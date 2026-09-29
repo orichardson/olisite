@@ -25,15 +25,7 @@ subtitle: |
     <a class="mono" href="mailto:oliver.richardson@mila.quebec" style="">oliver.richardson<i class="fa-solid fa-at"></i>mila.quebec</a>
     <br/>
     <a class="mono" href="mailto:o.richardson@lawzero.org" style="margin-left:5ch;opacity:35%;">o.richardson<i class="fa-solid fa-at"></i>lawzero.org</a>
-    </div>
-    <!--<span style="font-size:smaller;margin-bottom:-40px; display:block;">
-    <a class="mono" href="mailto:o.richardson@lawzero.org" style="margin-left:8.5ch;">o.richardson<i class="fa-solid fa-at"></i>lawzero.org</a> 
-    <br/>
-    <span style="font-size:smaller">
-    <a class="mono"  style="margin-left:21.5ch;">oli<i class="fa-solid fa-at"></i>cs.cornell.edu</a>
-    </span>
-    </span>
-    -->
+    </div>    
 # subtitle: |
 #     <div class="email-list">
 #     <a href="mailto:oliver.richardson@mila.quebec">
@@ -69,7 +61,7 @@ content_class: container-narrow
 <!-- <img src="{{ site.baseurl }}/images/me-3--crop2.jpg" 
     style="width:360px;margin:15px;border-radius:50%;border:2px solid black;max-width:90vw;"/> -->
 <img src="{{ site.baseurl }}/images/me4-cropped.jpg" 
-    style="width:290px;margin:15px;border-radius:30%;border:2px solid black;max-width:80vw;"/>
+    style="width:270px;margin:15px;border-radius:30%;border:2px solid black;max-width:50vw;"/>
 <!-- <img src="{{ site.baseurl }}/images/me-3-cropped.jpg" 
 style="width:450px;margin:15px;border-radius:50%;border:2px solid black;max-width:90vw;"/> -->
 <!-- <img src="/images/me-3--crop2.jpg" style="width:350px;margin:15px;margin-left:30px;border-radius:50%;"/> -->
@@ -177,17 +169,15 @@ I earned three majors (Mathematics, Cell & Molecular Biology, and Computer Scien
 -->
 Even before that, I [made video games](https://gitlab.com/zaytuna) in my free time.
 
-<!-- I also play many sports and improvise on the piano! -->
 I am 
 <!-- [married](orichardson.github.io/voli) -->
 married
 to the one and only 
 <!-- 100%-reasonable -->
 [Varsha Kishore](https://varshakishore.github.io/).
-<br>
-<!-- I like to sing and improvise on the piano (but not at the same time). -->
-<!-- I like to sing and improvise on the piano. -->
-I like to play sports and improvise on the piano.
+<br class='whenbig'/>
+I like to sing and improvise on the piano.
+<!-- I like to play sports and improvise on the piano. -->
 <!-- I improvise on the piano. -->
 
 <br>

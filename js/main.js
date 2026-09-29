@@ -76,7 +76,7 @@ $(function() {
     // navigation animation functions for sticking and un-sticking
     $('#navigation.sticky').data('animate-detach', function($sticky, $anchor, data){
         $sticky.delay( 0 ).queue(function() {
-            var compressed = $('#nav-icon-list').outerWidth() + 70;
+            var compressed = $('#nav-icon-list').outerWidth() + 10;
             $sticky.clearQueue().animate({'width': compressed+"px"}, 300)
                 .dequeue();
         } );
@@ -268,28 +268,44 @@ $(function() {
 		jqo.find(".accordion-panel").each(function(idx, elt){
 			// console.log(idx,elt);
 			let $curr_panel = $(elt);
-			let $extracontent = $curr_panel.find(".extra-content").get(0);
+			let extracontent = $curr_panel.find(".extra-content").get(0);
 
-			toggle_fun = function(evt) {
-				// console.log($curr_panel[0]);
-				// "this" should still be the panel
-				// $(this).find("i").toggleClass('fa-circle-chevron-left fa-circle-chevron-down');
+			if(extracontent) {
+				function expand_fun(evt) {
+					// expand current images
+					$curr_panel.find(".extra-content img").each(function( idx, imgelt ){
+						console.log(imgelt);
+						if(imgelt.dataset.src) imgelt.src = imgelt.dataset.src;
+					});
 
-				if($extracontent.style.maxHeight) {
-					$extracontent.style.maxHeight = null;
-					$curr_panel.find(".text-folded").show();
-					$curr_panel.find(".text-unfolded").hide();
-				} else {
 					// 1.3 is just buffer in case of page resize. 
-					$extracontent.style.maxHeight = (1.3*$extracontent.scrollHeight)+"px";
+					extracontent.style.maxHeight = (1.3*extracontent.scrollHeight + 300)+"px";
 					$curr_panel.find(".text-unfolded").show();
 					$curr_panel.find(".text-folded").hide();
 				}
-				evt.preventDefault();
-			};
+				function contract_fun(evt) {
+					extracontent.style.maxHeight = null;
+					$curr_panel.find(".text-folded").show();
+					$curr_panel.find(".text-unfolded").hide();
+				}
 
-			$curr_panel.find(".toggle-button").click(toggle_fun);
-			$curr_panel.find(".toggle-bbutton").dblclick(toggle_fun);
+				function toggle_fun(evt) {
+					if(extracontent.style.maxHeight)
+						contract_fun();
+					else
+						expand_fun();
+					evt.preventDefault();
+				};
+
+				$curr_panel.data('expander', expand_fun);
+				$curr_panel.data('contractor', contract_fun);
+				$curr_panel.find(".toggle-button").click(toggle_fun);
+				$curr_panel.find(".toggle-bbutton").dblclick(toggle_fun); // bbutton is not a typo
+			}
+			else {
+				$curr_panel.data('expander', function(){});
+				$curr_panel.data('contractor', function(){});
+			}
 		});
 	}
 

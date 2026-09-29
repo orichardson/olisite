@@ -10,8 +10,8 @@ supercedes: lir
 awards:
     - spotlight
 arxiv: https://arxiv.org/abs/2604.17140
-# extralinks:
-#     - 
+extralinks:
+    - ['code', 'https://github.com/orichardson/lir']
 ---
 
 **Abstract.**

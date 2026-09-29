@@ -5,7 +5,7 @@ venue: "Brown University Theory Seminar"
 date: 2026-04-02
 links:
     - ['slides.pptx', '/files/slides/InconsistencyQuantificationProblem--Brown26.pptx']
-    - ['recording (YouTube)', 'https://youtu.be/yXHPPXfQDQw']
+    - ['<i class="fa-brands fa-youtube"></i> recording', 'https://youtu.be/yXHPPXfQDQw', '--accent-color:red;']
 abstract: >
     Probabilistic Dependency Graphs (PDGs) are a powerful modeling framework that has two closely related semantics that play two seemingly different roles. On one hand, PDGs specify a joint distribution; in this capacity, they are an especially modular and interpretable generalization of traditional probabilistic graphical models. On the other hand, PDGs can be inconsistent, and have a natural inconsistency measure; this allows them not only to capture many situations in machine learning, but also to provide a principled justification of many loss functions.
 
