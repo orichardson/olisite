@@ -2,14 +2,15 @@
 # hide: true
 title: "Inverting the Bellman Equation: from Q-values to World-Models"
 authors: Alistair Letcher, Mattie&nbsp;Fellows, Alexander&nbsp;David&nbsp;Goldie, Jonathan&nbsp;Richens, Jakob&nbsp;Nicolaus&nbsp;Foerster, Oliver&nbsp;Ethan&nbsp;Richardson
-type: preprint
-conf: preprint (submitted to NeurIPS)
+type: conference
+# conf: preprint (submitted to NeurIPS)
+conf: NeurIPS
 year: 2026
 arxiv: https://arxiv.org/abs/2606.21173
-# month: May
+month: December
 extralinks:
     - ['webpage', 'https://inverting-bellman.github.io/']
-    - ['`code`', 'https://github.com/aletcher/inverting-bellman']
+    - ['code', 'https://github.com/aletcher/inverting-bellman']
     - ['<i class="fa-brands fa-x-twitter"></i><i class="fa-brands fa-twitter"></i>', 'https://x.com/_aletcher/status/2069412693744713935']
 ---
 
